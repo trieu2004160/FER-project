@@ -33,12 +33,9 @@ export default function App() {
     <AuthProvider>
       <Router>
         <Routes>
-          {/* Khi vào lần đầu sẽ tự động chuyển đến trang Login */}
-          <Route path="*" element={<Navigate to="/login" replace />} />
-
           {/* Không có Header/Footer */}
           <Route
-            path="/login"
+            path="/Login"
             element={
               <AuthLayout>
                 <Login />
@@ -46,7 +43,7 @@ export default function App() {
             }
           />
           <Route
-            path="/register"
+            path="/Register"
             element={
               <AuthLayout>
                 <Register />
@@ -56,7 +53,7 @@ export default function App() {
 
           {/* Có Header/Footer */}
           <Route element={<MainLayout />}>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/find-job" element={<FindJob />} />
             <Route path="/support" element={<Support />} />
             <Route
