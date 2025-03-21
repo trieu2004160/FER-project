@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Input, Button } from "antd";
 import { IoLocationSharp, IoSearch } from "react-icons/io5";
-import "./Basicfind.css";
 
 import {
   FaBriefcase,
@@ -21,7 +20,6 @@ import job1 from "../../images/job1.png";
 import job2 from "../../images/job2.png";
 import job3 from "../../images/job3.jpeg";
 import job4 from "../../images/job4.png";
-import "@/components/Basicfind/basicfind.css";
 import video1 from "../../images/video1.mp4";
 
 const FindJob: React.FC = () => {
@@ -42,9 +40,94 @@ const FindJob: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <style>{`
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        .min-h-screen {
+          min-height: 100vh;
+        }
+
+        .btn-hover {
+          position: relative;
+          overflow: hidden;
+        }
+
+        .btn-hover:after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: -100%;
+          background: linear-gradient(
+            120deg,
+            transparent,
+            rgba(255, 255, 255, 0.2),
+            transparent
+          );
+          transition: all 0.6s;
+        }
+
+        .btn-hover:hover:after {
+          left: 100%;
+        }
+
+        .category-card {
+          transition: transform 0.2s ease;
+        }
+
+        .category-card:hover {
+          transform: translateY(-2px);
+        }
+
+        .shadow-hover:hover {
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        @keyframes pulse {
+          0%,
+          100% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.5;
+          }
+        }
+
+        .loading {
+          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @media (max-width: 768px) {
+          .job-card {
+            padding: 1rem;
+          }
+
+          .category-card {
+            padding: 0.75rem;
+          }
+        }
+
+        @media (prefers-color-scheme: dark) {
+          .dark\\:bg-gray-900 {
+            background-color: #1a202c;
+          }
+
+          .dark\\:text-white {
+            color: #fff;
+          }
+
+          .dark\\:border-gray-700 {
+            border-color: #4a5568;
+          }
+        }
+      `}</style>
+
       {/* Hero Section */}
-      <div className="relative h-[300px] md:h-[300px] lg:h-[300px] overflow-hidden">
-        {/* Video Background */}
+      <div className="relative h-[300px] overflow-hidden">
         <video
           autoPlay
           loop
@@ -55,11 +138,7 @@ const FindJob: React.FC = () => {
           <source src={video1} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
-        {/* Overlay để làm tối video (nếu cần) */}
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
-
-        {/* Nội dung */}
         <div className="relative z-10 text-white py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
@@ -103,7 +182,6 @@ const FindJob: React.FC = () => {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Categories */}
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
             Popular Categories
@@ -225,7 +303,7 @@ const FindJob: React.FC = () => {
               {
                 id: "7",
                 logo: job3,
-                title: "Primary School Teachert",
+                title: "Primary School Teacher",
                 company:
                   "VIETNAM AUSTRALIA INTERNATIONAL EDUCATION JOINT STOCK COMPANY",
                 location: "Ho Chi Minh City",
