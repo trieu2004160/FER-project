@@ -6,7 +6,7 @@ const secondaryColor = colors[1];
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-200 border-t border-gray-200 mt-12">
+    <footer className="bg-slate-200 border-t border-gray-200 ">
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
