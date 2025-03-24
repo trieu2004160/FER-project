@@ -10,8 +10,8 @@ import {
   FaCalendarDay,
   FaExternalLinkAlt,
 } from "react-icons/fa";
-import job16 from "../../images/job6.png";
-const Job6 = () => {
+import job17 from "../../images/job7.png";
+const Job7 = () => {
   return (
     <div className="max-w-6xl mx-auto bg-white">
       <div className="flex flex-col md:flex-row">
@@ -20,7 +20,7 @@ const Job6 = () => {
           {/* Job title and verification */}
           <div className="mb-4">
             <h1 className="text-2xl font-bold text-gray-800">
-              Head of Human Resources Administration
+              Senior Manager Priority Private Client
               <span className="text-green-500">●</span>
             </h1>
           </div>
@@ -33,7 +33,7 @@ const Job6 = () => {
               </div>
               <div>
                 <div className="text-gray-600">Income </div>
-                <div className="font-semibold">18 - 23 million</div>
+                <div className="font-semibold">Agreement</div>
               </div>
             </div>
 
@@ -43,7 +43,7 @@ const Job6 = () => {
               </div>
               <div>
                 <div className="text-gray-600">Location</div>
-                <div className="font-semibold">Binh Phuoc</div>
+                <div className="font-semibold">Hanoi</div>
               </div>
             </div>
 
@@ -53,7 +53,7 @@ const Job6 = () => {
               </div>
               <div>
                 <div className="text-gray-600">Experience</div>
-                <div className="font-semibold">Over 5 years</div>
+                <div className="font-semibold">2 years</div>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@ const Job6 = () => {
           {/* Deadline */}
           <div className="flex items-center gap-2 mb-4 bg-gray-100 p-3 rounded-lg">
             <FaClock className="text-gray-500" />
-            <span>Application deadline: April 11, 2025</span>
+            <span>Application deadline: April 17, 2025</span>
           </div>
 
           {/* Action buttons */}
@@ -84,31 +84,28 @@ const Job6 = () => {
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
               <span className=" px-3 py-1 rounded-full text-gray-700">
-                Prepare annual human resource plan and implement the following
-                tasks: recruitment, training, staffing, personnel arrangement
-                and labor and salary budget.
+                Searching, approaching, and taking care of individual customers
+                using products/services at KienlongBank. - Implementing the plan
+                to develop capital mobilization and the bank's products and
+                services to individual customers according to the assigned
+                targets for each period.
               </span>
               <span className=" px-3 py-1 rounded-full text-gray-700">
-                Develop human resource policies (recruitment, training,
-                timekeeping, salary, bonus, allowance, subsidy, social welfare)
-                according to Company policies and State regulations. • Develop
-                and implement standards and personnel evaluation systems on
-                related issues such as capacity, work performance
-                (achievements),...
+                Receiving the needs of using products/services of individual
+                customers, acting as the focal point for related operations with
+                internal departments of KienlongBank.
               </span>
               <span className=" px-3 py-1 rounded-full text-gray-700">
-                Track order output
+                Searching and introducing individual customers who have needs
+                and are interested in Real Estate projects.
               </span>
               <span className=" px-3 py-1 rounded-full text-gray-700">
-                Participate in building the Quality Management System,
-                Environmental Management System and Social Responsibility at the
-                Company.
+                Coordinating with functional Departments/Offices to propose
+                plans to approach customers.
               </span>
               <span className=" px-3 py-1 rounded-full text-gray-700">
-                Build and maintain corporate culture in accordance with the
-                Board of Directors' direction, launch a movement to build
-                corporate culture. Ensure harmonious and synchronous
-                relationships throughout the Company.
+                Periodically monitoring and evaluating the implementation of
+                business targets
               </span>
             </div>
 
@@ -118,23 +115,15 @@ const Job6 = () => {
                 Candidate requirements
               </h3>
               <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                <li>Qualification: University degree or higher.</li>
+                <li>Major: Economics, Finance – Banking, Accounting.</li>
                 <li>
-                  Graduated from University in: Human Resource Management; Law;
-                  Business Administration or equivalent
+                  Foreign language: Ability to read and understand specialized
+                  English documents.
                 </li>
                 <li>
-                  Dynamic, progressive and enthusiastic in work, willing to
-                  learn, bold, confident, dare to think and dare to do, not
-                  afraid of difficulties.
-                </li>
-                <li>
-                  xperience working in manufacturing companies, preferably in
-                  the food processing industry. Experience in implementing
-                  Quality Management Systems, Environmental Management Systems
-                  and Corporate Social Responsibility is an advantage.
-                </li>
-                <li>
-                  Sharp grasp of business trends, pay attention to human factors
+                  Computer: Proficient in office computer programs (word, excel,
+                  powerpoint,....).
                 </li>
               </ul>
 
@@ -145,28 +134,20 @@ const Job6 = () => {
                 </h2>
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
                   <li>
-                    Competitive and attractive salary : Salary will be
-                    negotiated based on your ability and experience. We always
-                    appreciate the value you bring to the company.
+                    Attend professional management training courses for career
+                    development;
                   </li>
                   <li>
-                    Comprehensive benefits : In addition to full insurance, you
-                    also enjoy special benefits such as regular health
-                    check-ups, annual travel and exciting team-building
-                    programs.
+                    Annual leave, holidays, insurance according to law, health
+                    care insurance according to KienlongBank's regulations;
                   </li>
                   <li>
-                    Dynamic and creative working environment : We encourage
-                    innovation and creative freedom in work. You will have the
-                    opportunity to come up with ideas and implement unique human
-                    resource strategies, contributing to change and development
-                    of the company.
+                    Supported with gas costs, phone bills, work allowance,...
                   </li>
                   <li>
-                    Unlimited advancement : You will be given opportunities for
-                    advancement based on your performance, without time or rank
-                    barriers. The company always respects and appreciates
-                    dedication.
+                    Bonuses based on debt collection results, business
+                    performance, additional expenses based on unit performance
+                    and individual work results;
                   </li>
                 </ul>
               </div>
@@ -177,8 +158,8 @@ const Job6 = () => {
                 </h2>
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
                   <li>
-                    Binh Phuoc: Phuoc Hamlet 2, Dong Tam Commune, Dong Phu, Binh
-                    Phuoc, Dong Phu
+                    Hanoi: Sunshine Center 16 Pham Hung, My Dinh 2 Ward, Nam Tu
+                    Liem
                   </li>
                 </ul>
               </div>
@@ -188,7 +169,7 @@ const Job6 = () => {
                   Working time
                 </h2>
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                  <li>Monday - Saturday (from 07:30 to 16:30)</li>
+                  <li>Monday - Friday (from 08:00 to 17:30)</li>
                 </ul>
               </div>
             </div>
@@ -202,26 +183,28 @@ const Job6 = () => {
             <div className="flex gap-4 items-center mb-4">
               <div className="w-28 h-16 bg-blue-50 flex items-center justify-center">
                 <img
-                  src={job16}
+                  src={job17}
                   alt="FPT Telecom Logo"
                   className="max-w-full"
                 />
               </div>
               <div>
-                <h3 className="font-bold">GIA BAO GROUP JOINT STOCK COMPANY</h3>
+                <h3 className="font-bold">
+                  Kien Long Commercial Joint Stock Bank
+                </h3>
               </div>
             </div>
             <div className="space-y-3 text-gray-600">
               <div className="flex items-center gap-2">
                 <FaUsers className="text-gray-400" />
                 <span>
-                  Scale: <span className="text-black">100-499 employees</span>
+                  Scale: <span className="text-black">1000+ employees</span>
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-gray-400" />
                 <span>
-                  Field: <span className="text-black">Manufacture</span>
+                  Field: <span className="text-black">Bank</span>
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -229,7 +212,8 @@ const Job6 = () => {
                 <span>
                   Location:{" "}
                   <span className="text-black">
-                    28 Trương Công Định, KP. Phú Xuân, P. Tân Phú, TP. Đồng Xoài
+                    Số 40-42-44 Đường Phạm Hồng Thái- Phường Vĩnh Thanh Vân-
+                    Thành Phố Rạch Giá- Kiên Giang
                   </span>
                 </span>
               </div>
@@ -237,7 +221,7 @@ const Job6 = () => {
 
             <div className="mt-4">
               <a
-                href="https://www.hatdieubatu.vn/"
+                href="https://kienlongbank.com/"
                 className=" flex items-center gap-1"
               >
                 View company <FaExternalLinkAlt size={12} />
@@ -255,9 +239,7 @@ const Job6 = () => {
                 </div>
                 <div>
                   <div className="text-gray-600">Rank</div>
-                  <div className="font-semibold">
-                    Head/Deputy Head of Department
-                  </div>
+                  <div className="font-semibold">Staff</div>
                 </div>
               </div>
 
@@ -279,7 +261,7 @@ const Job6 = () => {
                 </div>
                 <div>
                   <div className="text-gray-600">Number of recruitment</div>
-                  <div className="font-semibold">2 person</div>
+                  <div className="font-semibold">20 person</div>
                 </div>
               </div>
 
@@ -300,4 +282,4 @@ const Job6 = () => {
   );
 };
 
-export default Job6;
+export default Job7;

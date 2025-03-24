@@ -21,6 +21,8 @@ import Job3 from "./page/Job3/Job3";
 import Job4 from "./components/Job4/Job4";
 import Job5 from "./components/Job5/Job5";
 import Job6 from "./components/Job6/Job6";
+import Job7 from "./components/Job7/Job7";
+import Job8 from "./components/Job8/Job8";
 interface ProtectedRouteProps {
   element: React.ReactNode;
 }
@@ -70,6 +72,8 @@ export default function App() {
             <Route path="/yongxing" element={<Job4 />} />
             <Route path="/trungdung" element={<Job5 />} />
             <Route path="/hatdieubatu" element={<Job6 />} />
+            <Route path="/kienlongbank" element={<Job7 />} />
+            <Route path="/fptjobs" element={<Job8 />} />
             <Route path="/fpt-telecom" element={<Transportation />} />
             <Route path="/employer" element={<Employer />} />
           </Route>

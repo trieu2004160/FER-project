@@ -106,6 +106,16 @@ export default function Dashboard() {
           avatar_url: profile.avatar_url,
           updated_at: new Date().toISOString(),
         });
+
+        if (error) {
+          throw error;
+        }
+
+        // Hiển thị thông báo thành công
+        showNotification("Profile updated successfully!", "success");
+
+        // Thoát chế độ chỉnh sửa
+        setEditMode(false);
       } catch (error) {
         console.error("Exception during profile update:", error);
         showNotification("An error occurred while updating profile", "error");

@@ -2,6 +2,14 @@ import React, { useState } from "react";
 import { Input, Button } from "antd";
 import { IoLocationSharp, IoSearch } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import job11 from "../../images/job11.png";
+import job12 from "../../images/job12.png";
+import job13 from "../../images/job13.png";
+import job14 from "../../images/job14.png";
+import job15 from "../../images/job15.jpg";
+import job16 from "../../images/job6.png";
+import job17 from "../../images/job7.png";
+import job18 from "../../images/job8.png";
 
 import {
   FaBriefcase,
@@ -13,14 +21,6 @@ import {
   FaBookmark,
   FaRegBookmark,
 } from "react-icons/fa";
-import iuhanh from "../../images/lu-hanh-logo.png";
-import concnet from "../../images/concentlogo.jpg";
-import hungphat from "../../images/hungphat.jpg";
-import atx from "../../images/atx.jpg";
-import job1 from "../../images/job1.png";
-import job2 from "../../images/job2.png";
-import job3 from "../../images/job3.jpeg";
-import job4 from "../../images/job4.png";
 import video1 from "../../images/video1.mp4";
 
 const FindJob: React.FC = () => {
@@ -64,10 +64,10 @@ const FindJob: React.FC = () => {
         navigate("/hatdieubatu");
         break;
       case "7":
-        navigate("/transportation/school-teacher");
+        navigate("/kienlongbank");
         break;
       case "8":
-        navigate("/transportation/ielts-teacher");
+        navigate("/fptjobs");
         break;
       default:
         // Trang mặc định nếu không tìm thấy ID phù hợp
@@ -79,48 +79,47 @@ const FindJob: React.FC = () => {
   const jobsList = [
     {
       id: "1",
-      logo: iuhanh,
-      title: "Deputy Director - Travel Center",
-      company: "VIET TRAVEL JOINT STOCK COMPANY",
-      location: "Hanoi",
-      salary: "10 - 20 Million",
+      logo: job11,
+      title: "FPT Telecom Sales Staff in the North - Income Up to 20",
+      company: "FPT Telecommunication Joint Stock Company",
+      location: "Son La & 17 other places",
+      salary: "8 - 20 million",
       type: "Full-time",
       posted: "2d ago",
     },
     {
       id: "2",
-      logo: concnet,
-      title: "Sales Consultant",
-      company: "CONCENT COMPANY",
-      location: "Ho Chi Minh City",
-      salary: "8 - 15 Million",
+      logo: job12,
+      title: "Import-Export Sales Staff / Sales Logistics/ Consultant",
+      company: "OMEGA Electrical Equipment Manufacturing",
+      location: "Hanoi",
+      salary: "12 - 20 million",
       type: "Full-time",
       posted: "3d ago",
     },
     {
       id: "3",
-      logo: hungphat,
-      title:
-        "General Accountant - Manufacturing Company in Hanoi - Salary from 12-18 ...",
-      company: "Hung Phat Construction and Materials ... COMPANY",
-      location: "Da Nang",
-      salary: "12 - 18 Million",
+      logo: job13,
+      title: "QS Estimating Engineer ",
+      company: "NGHE NANG INDUSTRIAL COMPANY LIMITED",
+      location: "South & 2 other places",
+      salary: "12 - 20 million",
       type: "Full-time",
       posted: "4d ago",
     },
     {
       id: "4",
-      logo: atx,
-      title: "Growth Data Analyst Upto 22M",
-      company: "ATX",
-      location: "Binh Duong",
-      salary: "10 - 13 Million",
+      logo: job14,
+      title: "SALES STAFF ",
+      company: "AVINH HUNG ALUMINUM VIETNAM CO., LTDTX",
+      location: "South & 2 other places",
+      salary: "12 - 20 million",
       type: "Full-time",
       posted: "7d ago",
     },
     {
       id: "5",
-      logo: job1,
+      logo: job15,
       title: "Graphic Designer Junior",
       company: "YOMARKER ADVERTISING COMPANY LIMITED",
       location: "Can Tho",
@@ -130,32 +129,31 @@ const FindJob: React.FC = () => {
     },
     {
       id: "6",
-      logo: job2,
-      title: "Accounts Receivable",
-      company: "Tien Tien Distribution Co., Ltd.",
-      location: "Hai Phong",
-      salary: "9 - 13 Million",
+      logo: job16,
+      title: "Production Shift Leader in Hung Yen",
+      company: "TRUNG DUNG PRODUCTION AND INVESTMENT JOINT",
+      location: "Hung Yen",
+      salary: "10 - 15 million",
       type: "Full-time",
       posted: "5d ago",
     },
     {
       id: "7",
-      logo: job3,
-      title: "Primary School Teacher",
-      company: "VIETNAM AUSTRALIA INTERNATIONAL EDUCATION JOINT STOCK COMPANY",
-      location: "Ho Chi Minh City",
+      logo: job17,
+      title: "Senior Manager Priority Private Client",
+      company: "Kien Long Commercial Joint Stock Bank",
+      location: "Hanoi",
       salary: "Agreement",
       type: "Full-time",
       posted: "3d ago",
     },
     {
       id: "8",
-      logo: job4,
-      title:
-        "Ielts Teacher (Part-Time) Working in Dong Da, Hanoi - Attractive Income with Final ...",
-      company: "VINGO ACADEMY COMPANY LIMITED",
-      location: "Ho Chi Minh City",
-      salary: "8 - 16 Million",
+      logo: job18,
+      title: "IT/Telecom Project Sales Executive",
+      company: "FPT International Telecommunication Company Limited",
+      location: "Ho Chi Minh, Hanoi",
+      salary: "Agreement",
       type: "Full-time",
       posted: "3d ago",
     },
@@ -414,7 +412,11 @@ const FindJob: React.FC = () => {
 
           {/* Load More */}
           <div className="text-center mt-8">
-            <Button className="px-6 py-3 bg-white text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
+            <Button
+              type="primary"
+              size="large"
+              className="bg-blue-600 hover:bg-blue-700 px-8"
+            >
               Load More Jobs
             </Button>
           </div>

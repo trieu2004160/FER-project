@@ -20,7 +20,8 @@ const Job4 = () => {
           {/* Job title and verification */}
           <div className="mb-4">
             <h1 className="text-2xl font-bold text-gray-800">
-              QS Estimating Engineer (Air Conditioning, Fire Protection)
+              SALES STAFF (MALE ONLY)/ Sales/ Market Sales in Construction
+              Materials Sector (Unlimited Income) - Hanoi
               <span className="text-green-500">●</span>
             </h1>
           </div>

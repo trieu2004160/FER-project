@@ -216,7 +216,7 @@ const Job3 = () => {
               </div>
               <div>
                 <h3 className="font-bold">
-                  FPT Telecommunication Joint Stock Company
+                  NGHE NANG INDUSTRIAL COMPANY LIMITED
                 </h3>
               </div>
             </div>
