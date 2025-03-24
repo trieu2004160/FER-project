@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Input, Button } from "antd";
 import { IoLocationSharp, IoSearch } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 import {
   FaBriefcase,
@@ -25,18 +26,140 @@ import video1 from "../../images/video1.mp4";
 const FindJob: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState("All");
   const [savedJobs, setSavedJobs] = useState<string[]>([]);
+  const navigate = useNavigate();
 
   const onSearch = (value: string) => {
     console.log("Searching for:", value);
   };
 
-  const toggleSaveJob = (jobId: string) => {
+  const toggleSaveJob = (e: React.MouseEvent, jobId: string) => {
+    e.stopPropagation(); // Ngăn chặn sự kiện click lan tỏa lên phần tử cha
     setSavedJobs((prev) =>
       prev.includes(jobId)
         ? prev.filter((id) => id !== jobId)
         : [...prev, jobId]
     );
   };
+
+  // Thay đổi hàm handleJobClick để điều hướng đến các trang khác nhau
+  const handleJobClick = (job: any) => {
+    // Dựa vào ID công việc để quyết định điều hướng đến trang nào
+    switch (job.id) {
+      case "1":
+        navigate("/fpt-telecom");
+        break;
+      case "2":
+        navigate("/omega");
+        break;
+      case "3":
+        navigate("/nghenang");
+        break;
+      case "4":
+        navigate("/yongxing");
+        break;
+      case "5":
+        navigate("/trungdung");
+        break;
+      case "6":
+        navigate("/hatdieubatu");
+        break;
+      case "7":
+        navigate("/transportation/school-teacher");
+        break;
+      case "8":
+        navigate("/transportation/ielts-teacher");
+        break;
+      default:
+        // Trang mặc định nếu không tìm thấy ID phù hợp
+        navigate("/transportation/job-details");
+    }
+  };
+
+  // Danh sách công việc
+  const jobsList = [
+    {
+      id: "1",
+      logo: iuhanh,
+      title: "Deputy Director - Travel Center",
+      company: "VIET TRAVEL JOINT STOCK COMPANY",
+      location: "Hanoi",
+      salary: "10 - 20 Million",
+      type: "Full-time",
+      posted: "2d ago",
+    },
+    {
+      id: "2",
+      logo: concnet,
+      title: "Sales Consultant",
+      company: "CONCENT COMPANY",
+      location: "Ho Chi Minh City",
+      salary: "8 - 15 Million",
+      type: "Full-time",
+      posted: "3d ago",
+    },
+    {
+      id: "3",
+      logo: hungphat,
+      title:
+        "General Accountant - Manufacturing Company in Hanoi - Salary from 12-18 ...",
+      company: "Hung Phat Construction and Materials ... COMPANY",
+      location: "Da Nang",
+      salary: "12 - 18 Million",
+      type: "Full-time",
+      posted: "4d ago",
+    },
+    {
+      id: "4",
+      logo: atx,
+      title: "Growth Data Analyst Upto 22M",
+      company: "ATX",
+      location: "Binh Duong",
+      salary: "10 - 13 Million",
+      type: "Full-time",
+      posted: "7d ago",
+    },
+    {
+      id: "5",
+      logo: job1,
+      title: "Graphic Designer Junior",
+      company: "YOMARKER ADVERTISING COMPANY LIMITED",
+      location: "Can Tho",
+      salary: "10 - 14 Million",
+      type: "Full-time",
+      posted: "1d ago",
+    },
+    {
+      id: "6",
+      logo: job2,
+      title: "Accounts Receivable",
+      company: "Tien Tien Distribution Co., Ltd.",
+      location: "Hai Phong",
+      salary: "9 - 13 Million",
+      type: "Full-time",
+      posted: "5d ago",
+    },
+    {
+      id: "7",
+      logo: job3,
+      title: "Primary School Teacher",
+      company: "VIETNAM AUSTRALIA INTERNATIONAL EDUCATION JOINT STOCK COMPANY",
+      location: "Ho Chi Minh City",
+      salary: "Agreement",
+      type: "Full-time",
+      posted: "3d ago",
+    },
+    {
+      id: "8",
+      logo: job4,
+      title:
+        "Ielts Teacher (Part-Time) Working in Dong Da, Hanoi - Attractive Income with Final ...",
+      company: "VINGO ACADEMY COMPANY LIMITED",
+      location: "Ho Chi Minh City",
+      salary: "8 - 16 Million",
+      type: "Full-time",
+      posted: "3d ago",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -238,94 +361,11 @@ const FindJob: React.FC = () => {
 
           {/* Job Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                id: "1",
-                logo: iuhanh,
-                title: "Deputy Director - Travel Center",
-                company: "VIET TRAVEL JOINT STOCK COMPANY",
-                location: "Hanoi",
-                salary: "10 - 20 Million",
-                type: "Full-time",
-                posted: "2d ago",
-              },
-              {
-                id: "2",
-                logo: concnet,
-                title: "Sales Consultant",
-                company: "CONCENT COMPANY",
-                location: "Ho Chi Minh City",
-                salary: "8 - 15 Million",
-                type: "Full-time",
-                posted: "3d ago",
-              },
-              {
-                id: "3",
-                logo: hungphat,
-                title:
-                  "General Accountant - Manufacturing Company in Hanoi - Salary from 12-18 ...",
-                company: "Hung Phat Construction and Materials ... COMPANY",
-                location: "Da Nang",
-                salary: "12 - 18 Million",
-                type: "Full-time",
-                posted: "4d ago",
-              },
-              {
-                id: "4",
-                logo: atx,
-                title: "Growth Data Analyst Upto 22M",
-                company: "ATX",
-                location: "Binh Duong",
-                salary: "10 - 13 Million",
-                type: "Full-time",
-                posted: "7d ago",
-              },
-              {
-                id: "5",
-                logo: job1,
-                title: "Graphic Designer Junior",
-                company: "YOMARKER ADVERTISING COMPANY LIMITED",
-                location: "Can Tho",
-                salary: "10 - 14 Million",
-                type: "Full-time",
-                posted: "1d ago",
-              },
-              {
-                id: "6",
-                logo: job2,
-                title: "Accounts Receivable",
-                company: "Tien Tien Distribution Co., Ltd.",
-                location: "Hai Phong",
-                salary: "9 - 13 Million",
-                type: "Full-time",
-                posted: "5d ago",
-              },
-              {
-                id: "7",
-                logo: job3,
-                title: "Primary School Teacher",
-                company:
-                  "VIETNAM AUSTRALIA INTERNATIONAL EDUCATION JOINT STOCK COMPANY",
-                location: "Ho Chi Minh City",
-                salary: "Agreement",
-                type: "Full-time",
-                posted: "3d ago",
-              },
-              {
-                id: "8",
-                logo: job4,
-                title:
-                  "Ielts Teacher (Part-Time) Working in Dong Da, Hanoi - Attractive Income with Final ...",
-                company: "VINGO ACADEMY COMPANY LIMITED",
-                location: "Ho Chi Minh City",
-                salary: "8 - 16 Million",
-                type: "Full-time",
-                posted: "3d ago",
-              },
-            ].map((job) => (
+            {jobsList.map((job) => (
               <div
                 key={job.id}
-                className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6"
+                onClick={() => handleJobClick(job)}
+                className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-6 cursor-pointer"
               >
                 <div className="flex items-start gap-4">
                   <img
@@ -355,7 +395,7 @@ const FindJob: React.FC = () => {
                           {job.posted}
                         </span>
                         <button
-                          onClick={() => toggleSaveJob(job.id)}
+                          onClick={(e) => toggleSaveJob(e, job.id)}
                           className="text-gray-400 hover:text-blue-600"
                         >
                           {savedJobs.includes(job.id) ? (

@@ -15,7 +15,12 @@ import Login from "./page/Login/Login";
 import Register from "./page/Register/Register";
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
-
+import Transportation from "./page/Transportation/Transportation";
+import Job2 from "./page/job2/Job2";
+import Job3 from "./page/Job3/Job3";
+import Job4 from "./components/Job4/Job4";
+import Job5 from "./components/Job5/Job5";
+import Job6 from "./components/Job6/Job6";
 interface ProtectedRouteProps {
   element: React.ReactNode;
 }
@@ -60,6 +65,12 @@ export default function App() {
               path="/profile"
               element={<ProtectedRoute element={<Profile />} />}
             />
+            <Route path="/omega" element={<Job2 />} />
+            <Route path="/nghenang" element={<Job3 />} />
+            <Route path="/yongxing" element={<Job4 />} />
+            <Route path="/trungdung" element={<Job5 />} />
+            <Route path="/hatdieubatu" element={<Job6 />} />
+            <Route path="/fpt-telecom" element={<Transportation />} />
             <Route path="/employer" element={<Employer />} />
           </Route>
         </Routes>

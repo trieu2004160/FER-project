@@ -164,7 +164,7 @@ const App: React.FC = () => {
       {/* Content */}
       <div className="py-16 px-8 md:px-12 max-w-6xl mx-auto mt-28">
         <div className="text-center mb-16 mt-3">
-          <Title level={2} className="text-gray-800 mb-10">
+          <Title level={2} className="text-gray-800 mb-10 mt-28">
             Dream Job | Job Recruitment Company
           </Title>
           <Divider className="my-6 ">
@@ -291,7 +291,7 @@ const App: React.FC = () => {
         </Card>
 
         {/* CTA */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg p-8 text-center text-white">
+        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-lg p-8 text-center text-white mt-10">
           <Title level={3} className="text-white mb-4">
             Ready to Find Your Dream Job?
           </Title>
@@ -303,7 +303,7 @@ const App: React.FC = () => {
             size="large"
             className="bg-white text-blue-600 hover:bg-blue-50 font-semibold"
           >
-            Get Started Now
+            <Link to="/">Get Started Now</Link>
           </Button>
         </div>
       </div>
