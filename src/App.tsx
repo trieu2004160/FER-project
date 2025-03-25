@@ -6,7 +6,6 @@ import {
   Navigate,
 } from "react-router-dom";
 import { AuthProvider, useAuth } from "@/lib/auth";
-import Home from "./page/Homepage/Home";
 import FindJob from "./page/Findjob/Findjob";
 import Support from "./page/Support/Support";
 import Profile from "./page/Profile/Profile";
@@ -39,48 +38,48 @@ function ProtectedRoute({ element }: ProtectedRouteProps) {
 export default function App() {
   return (
     <AuthProvider>
-      <Router>
-        <Routes>
-          {/* Không có Header/Footer */}
-          <Route
-            path="/Login"
-            element={
-              <AuthLayout>
-                <Login />
-              </AuthLayout>
-            }
-          />
-          <Route
-            path="/Register"
-            element={
-              <AuthLayout>
-                <Register />
-              </AuthLayout>
-            }
-          />
+      <Routes>
+        {/* Chuyển hướng mặc định từ "/" đến "/login" */}
+        <Route path="/" element={<Navigate to="/login" replace />} />
 
-          {/* Có Header/Footer */}
-          <Route element={<MainLayout />}>
-            <Route path="/" element={<Home />} />
-            <Route path="/find-job" element={<FindJob />} />
-            <Route path="/support" element={<Support />} />
-            <Route
-              path="/profile"
-              element={<ProtectedRoute element={<Profile />} />}
-            />
-            <Route path="/view" element={<View />} />
-            <Route path="/omega" element={<Job2 />} />
-            <Route path="/nghenang" element={<Job3 />} />
-            <Route path="/yongxing" element={<Job4 />} />
-            <Route path="/trungdung" element={<Job5 />} />
-            <Route path="/hatdieubatu" element={<Job6 />} />
-            <Route path="/kienlongbank" element={<Job7 />} />
-            <Route path="/fptjobs" element={<Job8 />} />
-            <Route path="/fpt-telecom" element={<Transportation />} />
-            <Route path="/employer" element={<Employer />} />
-          </Route>
-        </Routes>
-      </Router>
+        {/* Không có Header/Footer */}
+        <Route
+          path="/Login"
+          element={
+            <AuthLayout>
+              <Login />
+            </AuthLayout>
+          }
+        />
+        <Route
+          path="/Register"
+          element={
+            <AuthLayout>
+              <Register />
+            </AuthLayout>
+          }
+        />
+
+        {/* Có Header/Footer */}
+        <Route element={<MainLayout />}>
+          <Route path="/find-job" element={<FindJob />} />
+          <Route path="/support" element={<Support />} />
+          <Route
+            path="/profile"
+            element={<ProtectedRoute element={<Profile />} />}
+          />
+          <Route path="/view" element={<View />} />
+          <Route path="/omega" element={<Job2 />} />
+          <Route path="/nghenang" element={<Job3 />} />
+          <Route path="/yongxing" element={<Job4 />} />
+          <Route path="/trungdung" element={<Job5 />} />
+          <Route path="/hatdieubatu" element={<Job6 />} />
+          <Route path="/kienlongbank" element={<Job7 />} />
+          <Route path="/fptjobs" element={<Job8 />} />
+          <Route path="/fpt-telecom" element={<Transportation />} />
+          <Route path="/employer" element={<Employer />} />
+        </Route>
+      </Routes>
     </AuthProvider>
   );
 }
