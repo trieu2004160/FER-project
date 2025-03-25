@@ -1,4 +1,4 @@
-import { ReactElement, useState, useRef } from "react";
+import { ReactElement, useState } from "react";
 import gird from "../../images/gird.jpg";
 import gird2 from "../../images/gird2.jpg";
 import { Input, Button } from "antd";
@@ -196,7 +196,7 @@ export default function JobPortal() {
 
       {/* Hero Section */}
       <section className="bg-white py-24">
-        <div className="container ml-16 px-4 flex flex-col md:flex-row items-center">
+        <div className="container ml-40 px-5 flex flex-col md:flex-row items-center">
           {/* Left Side - Content */}
           <div className="md:w-1/2 space-y-6 md:pr-9">
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
@@ -355,7 +355,7 @@ export default function JobPortal() {
             </a>
           </div>
 
-          <div className="space-y-6 pl-20 pr-20">
+          <div className="space-y-6 pl-28 pr-28">
             {jobs.map((job, index) => (
               <div
                 key={index}
@@ -369,7 +369,7 @@ export default function JobPortal() {
               >
                 <div className="flex items-center space-x-6">
                   <div
-                    className={`w-16 h-16 rounded-full overflow-hidden border flex items-center justify-center p-2 bg-white ${
+                    className={`w-16 h-16 rounded-full overflow-hidden border flex items-center justify-center p-1 bg-white ${
                       hoveredJob === index
                         ? "border-blue-300"
                         : "border-gray-200"

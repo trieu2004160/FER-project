@@ -23,6 +23,7 @@ import Job5 from "./components/Job5/Job5";
 import Job6 from "./components/Job6/Job6";
 import Job7 from "./components/Job7/Job7";
 import Job8 from "./components/Job8/Job8";
+import View from "./components/Viewallnotifications/Viewallnotifications";
 interface ProtectedRouteProps {
   element: React.ReactNode;
 }
@@ -67,6 +68,7 @@ export default function App() {
               path="/profile"
               element={<ProtectedRoute element={<Profile />} />}
             />
+            <Route path="/view" element={<View />} />
             <Route path="/omega" element={<Job2 />} />
             <Route path="/nghenang" element={<Job3 />} />
             <Route path="/yongxing" element={<Job4 />} />

@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import { supabase } from "@/lib/supabaseClient";
 import { User } from "@supabase/supabase-js";
 import imageCompression from "browser-image-compression";
-import defaultAvatar from "../../images/u.jpg";
 
 // Define proper types
 interface Profile {
@@ -36,14 +35,9 @@ export default function Dashboard() {
     avatar_url: "",
   });
 
-  const [languages, setLanguages] = useState<string[]>([
-    "Tiếng Việt",
-    "Tiếng Anh",
-  ]);
   const [editMode, setEditMode] = useState(false);
-  const [editableExperiences, setEditableExperiences] =
-    useState<string[]>(languages);
-  const [activeTab, setActiveTab] = useState("profile");
+
+  const [activeTab] = useState("profile");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [isUploading, setIsUploading] = useState(false);
