@@ -21,7 +21,6 @@ import {
 } from "react-icons/fc";
 
 // Import images
-
 import u from "../../images/u.jpg";
 import up from "../../images/up.png";
 import gg from "../../images/gg.png";
@@ -192,20 +191,18 @@ export default function JobPortal() {
 
   return (
     <div className="font-sans">
-      {/* Other sections of your component go here... */}
-
       {/* Hero Section */}
-      <section className="bg-white py-24">
-        <div className="container ml-40 px-5 flex flex-col md:flex-row items-center">
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
           {/* Left Side - Content */}
-          <div className="md:w-1/2 space-y-6 md:pr-9">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+          <div className="md:w-1/2 space-y-6 md:pr-9 ml-24">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               Find a job that{" "}
               <span className="text-blue-600">
                 suits your interest & skills.
               </span>
             </h1>
-            <p className="text-gray-600 text-xl">
+            <p className="text-gray-600 text-lg">
               Start now! Looking for a job you have dream of.
             </p>
 
@@ -248,29 +245,29 @@ export default function JobPortal() {
           </div>
 
           {/* Right Side - Illustration */}
-          <div className="md:w-1/2 flex justify-center mt-10 md:mt-0">
+          <div className="ml-9 flex justify-center mt-10 md:mt-0">
             <img
               src={gird}
               alt="people searching for jobs"
-              className="w-full max-w-lg h-96 rounded-lg "
+              className="w-full max-w-lg h-96 object-cover"
             />
           </div>
         </div>
       </section>
 
       {/* Popular Jobs Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
             <span className="text-blue-600">Most Popular</span> Jobs You Can
             Apply
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {popularJobs.map((job, index) => (
               <div
                 key={index}
-                className="transition-all duration-300 hover:-translate-y-1"
+                className="bg-white p-4 rounded-lg shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-lg"
               >
                 <h3
                   className={`text-xl font-semibold mb-1 ${
@@ -341,7 +338,7 @@ export default function JobPortal() {
       </section>
 
       {/* Featured Jobs Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold">
@@ -355,7 +352,7 @@ export default function JobPortal() {
             </a>
           </div>
 
-          <div className="space-y-6 pl-28 pr-28">
+          <div className="space-y-6 ml-28 mr-28">
             {jobs.map((job, index) => (
               <div
                 key={index}
@@ -470,9 +467,9 @@ export default function JobPortal() {
             ].map((stat, index) => (
               <div
                 key={index}
-                className="text-center p-6 rounded-lg  bg-opacity-80"
+                className="text-center p-6 rounded-lg bg-white/20 backdrop-blur-sm"
               >
-                <div className="text-4xl md:text-5xl font-bold mb-2">
+                <div className="text-4xl md:text-5xl font-bold mb-2 text-white">
                   {stat.number}
                 </div>
                 <div className="text-blue-100">{stat.label}</div>
