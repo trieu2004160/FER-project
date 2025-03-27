@@ -10,7 +10,8 @@ import job15 from "../../images/job15.jpg";
 import job16 from "../../images/job6.png";
 import job17 from "../../images/job7.png";
 import job18 from "../../images/job8.png";
-
+import job19 from "../../images/job19.png";
+import job20 from "../../images/Job20.png";
 import {
   FaBriefcase,
   FaBullhorn,
@@ -26,6 +27,7 @@ import video1 from "../../images/video1.mp4";
 const FindJob: React.FC = () => {
   const [selectedFilter, setSelectedFilter] = useState("All");
   const [savedJobs, setSavedJobs] = useState<string[]>([]);
+  const [visibleJobs, setVisibleJobs] = useState(6); // Số lượng công việc hiển thị ban đầu
   const navigate = useNavigate();
 
   const onSearch = (value: string) => {
@@ -33,7 +35,7 @@ const FindJob: React.FC = () => {
   };
 
   const toggleSaveJob = (e: React.MouseEvent, jobId: string) => {
-    e.stopPropagation(); // Ngăn chặn sự kiện click lan tỏa lên phần tử cha
+    e.stopPropagation();
     setSavedJobs((prev) =>
       prev.includes(jobId)
         ? prev.filter((id) => id !== jobId)
@@ -41,9 +43,7 @@ const FindJob: React.FC = () => {
     );
   };
 
-  // Thay đổi hàm handleJobClick để điều hướng đến các trang khác nhau
   const handleJobClick = (job: any) => {
-    // Dựa vào ID công việc để quyết định điều hướng đến trang nào
     switch (job.id) {
       case "1":
         navigate("/fpt-telecom");
@@ -69,8 +69,13 @@ const FindJob: React.FC = () => {
       case "8":
         navigate("/fptjobs");
         break;
+      case "9":
+        navigate("/congnghiepdainam");
+        break;
+      case "10":
+        navigate("/indovina");
+        break;
       default:
-        // Trang mặc định nếu không tìm thấy ID phù hợp
         navigate("/transportation/job-details");
     }
   };
@@ -124,7 +129,7 @@ const FindJob: React.FC = () => {
       company: "YOMARKER ADVERTISING COMPANY LIMITED",
       location: "Can Tho",
       salary: "10 - 14 Million",
-      type: "Full-time",
+      type: "Remote",
       posted: "1d ago",
     },
     {
@@ -144,7 +149,7 @@ const FindJob: React.FC = () => {
       company: "Kien Long Commercial Joint Stock Bank",
       location: "Hanoi",
       salary: "Agreement",
-      type: "Full-time",
+      type: "Remote",
       posted: "3d ago",
     },
     {
@@ -154,10 +159,41 @@ const FindJob: React.FC = () => {
       company: "FPT International Telecommunication Company Limited",
       location: "Ho Chi Minh, Hanoi",
       salary: "Agreement",
-      type: "Full-time",
+      type: "Remote",
+      posted: "3d ago",
+    },
+    {
+      id: "9",
+      logo: job19,
+      title: "Maintenance and Repair Technician",
+      company: "Dai Nam Industrial Science Joint Stock Company",
+      location: "Ho Chi Minh, Hanoi",
+      salary: "Agreement",
+      type: "Remote",
+      posted: "3d ago",
+    },
+    {
+      id: "10",
+      logo: job20,
+      title: "Corporate Customer Relations Specialist - Thien Long Branch",
+      company: "INDOVINA BANK LIMITED",
+      location: "Ho Chi Minh, Hanoi",
+      salary: "Agreement",
+      type: "Remote",
       posted: "3d ago",
     },
   ];
+
+  // Filter jobs based on selected filter
+  const filteredJobs = jobsList.filter((job) => {
+    if (selectedFilter === "All") return true;
+    return job.type === selectedFilter;
+  });
+
+  // Hàm load thêm công việc
+  const handleLoadMore = () => {
+    setVisibleJobs((prevVisible) => prevVisible + 6);
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -318,7 +354,7 @@ const FindJob: React.FC = () => {
             ].map((category, index) => (
               <div
                 key={index}
-                className="flex items-center gap-4 p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow cursor-pointer"
+                className="flex items-center gap-4 p-6 bg-white rounded-lg shadow-sm hover:shadow-md  cursor-pointer  hover:-translate-y-2 transition-all active:scale-95"
               >
                 <div className="p-3 bg-blue-100 text-blue-600 rounded-lg">
                   {category.icon}
@@ -359,7 +395,7 @@ const FindJob: React.FC = () => {
 
           {/* Job Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {jobsList.map((job) => (
+            {filteredJobs.slice(0, visibleJobs).map((job) => (
               <div
                 key={job.id}
                 onClick={() => handleJobClick(job)}
@@ -410,16 +446,19 @@ const FindJob: React.FC = () => {
             ))}
           </div>
 
-          {/* Load More */}
-          <div className="text-center mt-8">
-            <Button
-              type="primary"
-              size="large"
-              className="bg-blue-600 hover:bg-blue-700 px-8"
-            >
-              Load More Jobs
-            </Button>
-          </div>
+          {/* Load More - Chỉ hiển thị khi còn công việc để tải */}
+          {visibleJobs < filteredJobs.length && (
+            <div className="text-center mt-8">
+              <Button
+                type="primary"
+                size="large"
+                onClick={handleLoadMore}
+                className="bg-blue-600 hover:bg-blue-700 px-8"
+              >
+                Load More Jobs
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </div>

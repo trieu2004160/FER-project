@@ -10,8 +10,8 @@ import {
   FaCalendarDay,
   FaExternalLinkAlt,
 } from "react-icons/fa";
-import job17 from "../../images/job7.png";
-const Job7 = () => {
+import job18 from "../../images/job8.png";
+const Job10 = () => {
   return (
     <div className="max-w-6xl mx-auto bg-white">
       <div className="flex flex-col md:flex-row">
@@ -20,7 +20,7 @@ const Job7 = () => {
           {/* Job title and verification */}
           <div className="mb-4">
             <h1 className="text-2xl font-bold text-gray-800">
-              Senior Manager Priority Private Client
+              Corporate Customer Relations Specialist - Thien Long Branch
               <span className="text-green-500">●</span>
             </h1>
           </div>
@@ -53,7 +53,7 @@ const Job7 = () => {
               </div>
               <div>
                 <div className="text-gray-600">Experience</div>
-                <div className="font-semibold">2 years</div>
+                <div className="font-semibold">Not required</div>
               </div>
             </div>
           </div>
@@ -84,28 +84,18 @@ const Job7 = () => {
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
               <span className=" px-3 py-1 rounded-full text-gray-700">
-                Searching, approaching, and taking care of individual customers
-                using products/services at KienlongBank. - Implementing the plan
-                to develop capital mobilization and the bank's products and
-                services to individual customers according to the assigned
-                targets for each period.
+                Proactively search, contact, advise and market the Bank's
+                products and services;
               </span>
               <span className=" px-3 py-1 rounded-full text-gray-700">
-                Receiving the needs of using products/services of individual
-                customers, acting as the focal point for related operations with
-                internal departments of KienlongBank.
+                Manage and care for existing customers;
               </span>
               <span className=" px-3 py-1 rounded-full text-gray-700">
-                Searching and introducing individual customers who have needs
-                and are interested in Real Estate projects.
+                Search and develop new customers domestically and
+                internationally;
               </span>
               <span className=" px-3 py-1 rounded-full text-gray-700">
-                Coordinating with functional Departments/Offices to propose
-                plans to approach customers.
-              </span>
-              <span className=" px-3 py-1 rounded-full text-gray-700">
-                Periodically monitoring and evaluating the implementation of
-                business targets
+                Manage, exploit and identify credit risks
               </span>
             </div>
 
@@ -115,15 +105,22 @@ const Job7 = () => {
                 Candidate requirements
               </h3>
               <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                <li>Qualification: University degree or higher.</li>
-                <li>Major: Economics, Finance – Banking, Accounting.</li>
                 <li>
-                  Foreign language: Ability to read and understand specialized
-                  English documents.
+                  Graduated from university with majors: Finance, Banking,
+                  Business Administration or related majors;
                 </li>
                 <li>
-                  Computer: Proficient in office computer programs (word, excel,
-                  powerpoint,....).
+                  {" "}
+                  Have knowledge of business products and services for corporate
+                  customers in the banking industry;
+                </li>
+                <li>
+                  Have good knowledge of economics, finance - banking and laws
+                  related to banking business activities for corporate
+                  customers;
+                </li>
+                <li>
+                  Skills in analyzing, reporting and appraising corporate credit
                 </li>
               </ul>
 
@@ -133,22 +130,13 @@ const Job7 = () => {
                   Interest
                 </h2>
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
+                  <li>Competitive salary and bonus</li>
+                  <li>Bonuses on national holidays and Bank's birthday</li>
                   <li>
-                    Attend professional management training courses for career
-                    development;
+                    Participate in social insurance with full salary payment
+                    according to Labor Contract
                   </li>
-                  <li>
-                    Annual leave, holidays, insurance according to law, health
-                    care insurance according to KienlongBank's regulations;
-                  </li>
-                  <li>
-                    Supported with gas costs, phone bills, work allowance,...
-                  </li>
-                  <li>
-                    Bonuses based on debt collection results, business
-                    performance, additional expenses based on unit performance
-                    and individual work results;
-                  </li>
+                  <li> Lunch, uniform, shoe allowance</li>
                 </ul>
               </div>
               <div className="border-t pt-4 mt-4">
@@ -158,8 +146,8 @@ const Job7 = () => {
                 </h2>
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
                   <li>
-                    Hanoi: Sunshine Center 16 Pham Hung, My Dinh 2 Ward, Nam Tu
-                    Liem
+                    Hanoi: 36 Hoang Cau, O Cho Dua Ward, Dong Da District,
+                    Hanoi, Dong Da
                   </li>
                 </ul>
               </div>
@@ -183,28 +171,26 @@ const Job7 = () => {
             <div className="flex gap-4 items-center mb-4">
               <div className="w-28 h-16 bg-blue-50 flex items-center justify-center">
                 <img
-                  src={job17}
+                  src={job18}
                   alt="FPT Telecom Logo"
                   className="max-w-full"
                 />
               </div>
               <div>
-                <h3 className="font-bold">
-                  Kien Long Commercial Joint Stock Bank
-                </h3>
+                <h3 className="font-bold">INDOVINA BANK LIMITED</h3>
               </div>
             </div>
             <div className="space-y-3 text-gray-600">
               <div className="flex items-center gap-2">
                 <FaUsers className="text-gray-400" />
                 <span>
-                  Scale: <span className="text-black">1000+ employees</span>
+                  Scale: <span className="text-black">10-24 employees</span>
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-gray-400" />
                 <span>
-                  Field: <span className="text-black">Bank</span>
+                  Field: <span className="text-black">Other</span>
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -212,8 +198,8 @@ const Job7 = () => {
                 <span>
                   Location:{" "}
                   <span className="text-black">
-                    Số 40-42-44 Đường Phạm Hồng Thái- Phường Vĩnh Thanh Vân-
-                    Thành Phố Rạch Giá- Kiên Giang
+                    97A Nguyễn Văn Trỗi. Phường 11, Quận Phú Nhuận, Tp HCM, Việt
+                    Nam
                   </span>
                 </span>
               </div>
@@ -221,7 +207,7 @@ const Job7 = () => {
 
             <div className="mt-4">
               <a
-                href="https://kienlongbank.com/"
+                href="https://www.indovinabank.com.vn/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" flex items-center gap-1"
@@ -263,7 +249,7 @@ const Job7 = () => {
                 </div>
                 <div>
                   <div className="text-gray-600">Number of recruitment</div>
-                  <div className="font-semibold">20 person</div>
+                  <div className="font-semibold">9 people</div>
                 </div>
               </div>
 
@@ -284,4 +270,4 @@ const Job7 = () => {
   );
 };
 
-export default Job7;
+export default Job10;

@@ -250,7 +250,9 @@ const JobCard = () => {
             <div className="mt-4">
               <a
                 href="https://fptvietnam.vn/bai-viet/dia-chi-cong-ty-co-phan-vien-thong-fpt-telecom-chi-nhanh-binh-dinh"
-                className=" flex items-center gap-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1"
               >
                 View company <FaExternalLinkAlt size={12} />
               </a>

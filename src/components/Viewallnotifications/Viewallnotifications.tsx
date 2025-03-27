@@ -10,35 +10,71 @@ interface Notification {
   content: string;
   time: string;
   isRead: boolean;
-  type: "friend_request" | "security" | "project";
+  type: "friend_request" | "security" | "project" | "general";
 }
 
-// Dữ liệu mẫu về thông báo
+// Dữ liệu mẫu mở rộng
 const initialNotifications: Notification[] = [
   {
     id: 1,
-    sender: "Nguyễn Văn A",
-    avatar: "/api/placeholder/50/50",
-    content: "Đã gửi một yêu cầu kết bạn",
-    time: "2 phút trước",
+    sender: "Nguyen Van A",
+    avatar: f11,
+    content: "Sent a friend request",
+    time: "1 minutes ago",
     isRead: false,
     type: "friend_request",
   },
   {
     id: 2,
-    sender: "Hệ Thống",
-    avatar: "/api/placeholder/50/50",
-    content: "Tài khoản của bạn vừa đăng nhập ở thiết bị mới",
-    time: "1 giờ trước",
+    sender: "System",
+    avatar: f11,
+    content: "Your account has just been logged in on a new device.",
+    time: "2 minute ago",
     isRead: false,
     type: "security",
   },
   {
     id: 3,
-    sender: "Dự Án",
-    avatar: "/api/placeholder/50/50",
-    content: "Deadline dự án sắp đến. Hãy hoàn thành công việc",
-    time: "4 giờ trước",
+    sender: "Project Manager",
+    avatar: f11,
+    content: "Project deadline is coming. Get it done.",
+    time: "3 minutes ago",
+    isRead: false,
+    type: "project",
+  },
+  {
+    id: 4,
+    sender: "System",
+    avatar: f11,
+    content: "Security alert: Suspicious login attempt detected.",
+    time: "5 minutes ago",
+    isRead: true,
+    type: "security",
+  },
+  {
+    id: 5,
+    sender: "John Doe",
+    avatar: f11,
+    content: "Liked your post.",
+    time: "10 minutes ago",
+    isRead: true,
+    type: "general",
+  },
+  {
+    id: 6,
+    sender: "Jane Smith",
+    avatar: f11,
+    content: "Commented on your photo.",
+    time: "15 minutes ago",
+    isRead: true,
+    type: "general",
+  },
+  {
+    id: 7,
+    sender: "Team Lead",
+    avatar: f11,
+    content: "Meeting scheduled for tomorrow at 10 AM.",
+    time: "20 minutes ago",
     isRead: true,
     type: "project",
   },
@@ -48,14 +84,15 @@ const View: React.FC = () => {
   const [notifications, setNotifications] =
     useState<Notification[]>(initialNotifications);
 
-  // Hàm đánh dấu tất cả thông báo là đã đọc
+  // Đánh dấu tất cả thông báo là đã đọc
   const markAllAsRead = () => {
     setNotifications(notifications.map((note) => ({ ...note, isRead: true })));
   };
 
-  // Hàm xóa thông báo
+  // Xóa thông báo
   const removeNotification = (id: number) => {
-    setNotifications(notifications.filter((note) => note.id !== id));
+    const updatedNotifications = notifications.filter((note) => note.id !== id);
+    setNotifications(updatedNotifications);
   };
 
   return (
@@ -65,14 +102,14 @@ const View: React.FC = () => {
         <div className="bg-blue-500 text-white px-4 py-3 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <Bell />
-            <h1 className="text-xl font-bold">Thông Báo</h1>
+            <h1 className="text-xl font-bold">Notification</h1>
           </div>
           <button
             onClick={markAllAsRead}
             className="text-sm bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded flex items-center space-x-1"
           >
             <Check size={16} />
-            <span>Đánh Dấu Đọc</span>
+            <span>Mark all as read</span>
           </button>
         </div>
 
@@ -89,7 +126,7 @@ const View: React.FC = () => {
                 {/* Avatar */}
                 <div className="flex-shrink-0">
                   <img
-                    src={f11}
+                    src={notification.avatar}
                     alt={notification.sender}
                     className="w-10 h-10 rounded-full"
                   />

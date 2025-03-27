@@ -10,8 +10,8 @@ import {
   FaCalendarDay,
   FaExternalLinkAlt,
 } from "react-icons/fa";
-import job17 from "../../images/job7.png";
-const Job7 = () => {
+import job18 from "../../images/job8.png";
+const Job9 = () => {
   return (
     <div className="max-w-6xl mx-auto bg-white">
       <div className="flex flex-col md:flex-row">
@@ -20,7 +20,8 @@ const Job7 = () => {
           {/* Job title and verification */}
           <div className="mb-4">
             <h1 className="text-2xl font-bold text-gray-800">
-              Senior Manager Priority Private Client
+              Maintenance and Repair Technician (From 8-15 million + Field
+              Support Fee)
               <span className="text-green-500">●</span>
             </h1>
           </div>
@@ -43,7 +44,7 @@ const Job7 = () => {
               </div>
               <div>
                 <div className="text-gray-600">Location</div>
-                <div className="font-semibold">Hanoi</div>
+                <div className="font-semibold">Ho Chi Minh, Hanoi</div>
               </div>
             </div>
 
@@ -53,7 +54,7 @@ const Job7 = () => {
               </div>
               <div>
                 <div className="text-gray-600">Experience</div>
-                <div className="font-semibold">2 years</div>
+                <div className="font-semibold">Not required</div>
               </div>
             </div>
           </div>
@@ -84,28 +85,15 @@ const Job7 = () => {
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
               <span className=" px-3 py-1 rounded-full text-gray-700">
-                Searching, approaching, and taking care of individual customers
-                using products/services at KienlongBank. - Implementing the plan
-                to develop capital mobilization and the bank's products and
-                services to individual customers according to the assigned
-                targets for each period.
+                Delivery and receipt of goods at the warehouse;
               </span>
               <span className=" px-3 py-1 rounded-full text-gray-700">
-                Receiving the needs of using products/services of individual
-                customers, acting as the focal point for related operations with
-                internal departments of KienlongBank.
+                Maintenance and repair of fans, water pumps, electric motors,
+                electrical cabinets, maintenance of fire protection
+                equipment,...
               </span>
               <span className=" px-3 py-1 rounded-full text-gray-700">
-                Searching and introducing individual customers who have needs
-                and are interested in Real Estate projects.
-              </span>
-              <span className=" px-3 py-1 rounded-full text-gray-700">
-                Coordinating with functional Departments/Offices to propose
-                plans to approach customers.
-              </span>
-              <span className=" px-3 py-1 rounded-full text-gray-700">
-                Periodically monitoring and evaluating the implementation of
-                business targets
+                Work assigned by management
               </span>
             </div>
 
@@ -115,16 +103,13 @@ const Job7 = () => {
                 Candidate requirements
               </h3>
               <ul className="list-disc pl-5 text-gray-700 space-y-2">
-                <li>Qualification: University degree or higher.</li>
-                <li>Major: Economics, Finance – Banking, Accounting.</li>
                 <li>
-                  Foreign language: Ability to read and understand specialized
-                  English documents.
+                  Nam graduated from high school in fields such as: mechanics,
+                  electricity, machine manufacturing...
                 </li>
-                <li>
-                  Computer: Proficient in office computer programs (word, excel,
-                  powerpoint,....).
-                </li>
+                <li>Priority for discharged</li>
+                <li>Get along with colleagues</li>
+                <li>Hardworking, diligent, ambitious</li>
               </ul>
 
               <div className="border-t pt-4 mt-4">
@@ -134,21 +119,23 @@ const Job7 = () => {
                 </h2>
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
                   <li>
-                    Attend professional management training courses for career
-                    development;
+                    Salary is negotiable based on ability: from 8-15 million +
+                    field support fee.
                   </li>
                   <li>
-                    Annual leave, holidays, insurance according to law, health
-                    care insurance according to KienlongBank's regulations;
+                    Supported with food/accommodation/transportation and other
+                    allowances when working at distant factories and
+                    construction sites according to company policy.
                   </li>
                   <li>
-                    Supported with gas costs, phone bills, work allowance,...
+                    Enjoy all benefits prescribed by the State and the Company
+                    (Social Insurance, Unemployment Insurance, Health
+                    Insurance), annual leave with full salary, bonuses on
+                    holidays: April 30 and May 1, September 2, New Year, 13th
+                    month salary + bonus, gifts on March 8; October 20,
+                    Mid-Autumn Festival, Children's Day, ....
                   </li>
-                  <li>
-                    Bonuses based on debt collection results, business
-                    performance, additional expenses based on unit performance
-                    and individual work results;
-                  </li>
+                  <li>Get occupational accident insurance</li>
                 </ul>
               </div>
               <div className="border-t pt-4 mt-4">
@@ -158,8 +145,8 @@ const Job7 = () => {
                 </h2>
                 <ul className="list-disc pl-5 text-gray-700 space-y-2">
                   <li>
-                    Hanoi: Sunshine Center 16 Pham Hung, My Dinh 2 Ward, Nam Tu
-                    Liem
+                    Hanoi: Room 303, 3rd Floor, An Binh Building, Dinh Cong,
+                    Hoang Mai
                   </li>
                 </ul>
               </div>
@@ -183,14 +170,14 @@ const Job7 = () => {
             <div className="flex gap-4 items-center mb-4">
               <div className="w-28 h-16 bg-blue-50 flex items-center justify-center">
                 <img
-                  src={job17}
+                  src={job18}
                   alt="FPT Telecom Logo"
                   className="max-w-full"
                 />
               </div>
               <div>
                 <h3 className="font-bold">
-                  Kien Long Commercial Joint Stock Bank
+                  Dai Nam Industrial Science Joint Stock Company
                 </h3>
               </div>
             </div>
@@ -198,13 +185,13 @@ const Job7 = () => {
               <div className="flex items-center gap-2">
                 <FaUsers className="text-gray-400" />
                 <span>
-                  Scale: <span className="text-black">1000+ employees</span>
+                  Scale: <span className="text-black">10-24 employees</span>
                 </span>
               </div>
               <div className="flex items-center gap-2">
                 <FaMapMarkerAlt className="text-gray-400" />
                 <span>
-                  Field: <span className="text-black">Bank</span>
+                  Field: <span className="text-black">Other</span>
                 </span>
               </div>
               <div className="flex items-center gap-2">
@@ -212,8 +199,8 @@ const Job7 = () => {
                 <span>
                   Location:{" "}
                   <span className="text-black">
-                    Số 40-42-44 Đường Phạm Hồng Thái- Phường Vĩnh Thanh Vân-
-                    Thành Phố Rạch Giá- Kiên Giang
+                    Tòa Nhà An Bình 1, Số 3 Trần Nguyên Đán, P.Định Công, Quận
+                    Hoàng Mai, Hà Nội
                   </span>
                 </span>
               </div>
@@ -221,7 +208,7 @@ const Job7 = () => {
 
             <div className="mt-4">
               <a
-                href="https://kienlongbank.com/"
+                href="https://congnghiepdainam.com.vn/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className=" flex items-center gap-1"
@@ -263,7 +250,7 @@ const Job7 = () => {
                 </div>
                 <div>
                   <div className="text-gray-600">Number of recruitment</div>
-                  <div className="font-semibold">20 person</div>
+                  <div className="font-semibold">9 people</div>
                 </div>
               </div>
 
@@ -284,4 +271,4 @@ const Job7 = () => {
   );
 };
 
-export default Job7;
+export default Job9;

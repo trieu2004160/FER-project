@@ -215,7 +215,9 @@ const Job5 = () => {
 
             <div className="mt-4">
               <a
-                href="https://nghenang.vn/"
+                href="https://trungdung.com.vn/vi/home/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className=" flex items-center gap-1"
               >
                 View company <FaExternalLinkAlt size={12} />

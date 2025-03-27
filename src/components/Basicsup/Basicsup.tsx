@@ -12,6 +12,7 @@ import {
 import { Link } from "react-router-dom";
 const { Title, Paragraph, Text } = Typography;
 import sup from "../../images/sup.jpg";
+import gpt2 from "../../images/gpt2.webp";
 const data = [
   {
     key: "1",

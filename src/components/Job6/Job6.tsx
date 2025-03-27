@@ -240,6 +240,8 @@ const Job6 = () => {
             <div className="mt-4">
               <a
                 href="https://www.hatdieubatu.vn/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className=" flex items-center gap-1"
               >
                 View company <FaExternalLinkAlt size={12} />

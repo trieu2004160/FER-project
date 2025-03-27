@@ -18,7 +18,7 @@ import a4 from "../../images/a4.jpg";
 import e4 from "../../images/e4.jpg";
 import e5 from "../../images/e5.jpg";
 import e6 from "../../images/e6.jpg";
-
+import gpt from "../../images/gpt.webp";
 // Updated companies data with employ information
 const companies = [
   {
@@ -262,12 +262,15 @@ const SearchSection: React.FC<{
   handleSearch,
 }) => {
   return (
-    <div className="bg-gradient-to-r from-blue-700 to-blue-900 p-8 rounded-xl shadow-md">
+    <div
+      className="p-8 rounded-xl shadow-md bg-cover bg-center"
+      style={{ backgroundImage: `url(${gpt})` }}
+    >
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold text-white mb-2 text-center">
+        <h2 className="text-3xl font-bold text-slate-800 mb-2 text-center">
           Discover Your Dream Company
         </h2>
-        <p className="text-blue-100 text-center mb-8">
+        <p className="text-slate-700 text-center mb-8">
           Explore top companies in Vietnam and find the perfect workplace for
           your career.
         </p>
